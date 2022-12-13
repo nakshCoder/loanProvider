@@ -1,0 +1,275 @@
+/* All Changes */
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Header Section CSS */
+
+header {
+  background-color: #116a9e;
+}
+
+.navbar-brand img {
+  width: 150px;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-light .navbar-toggler {
+  border: 1px solid #fff;
+  color: white;
+  outline: none;
+}
+
+/* Header Ends Here */
+
+/* Discount Section Here */
+
+.discount {
+  padding: 50px 0px 0px 0px;
+  background-color: #f3f5f5;
+}
+
+.discount-box ul li {
+  list-style: none;
+  position: relative;
+  line-height: 2rem;
+}
+
+.discount-box ul li::before {
+  content: url(image/discount-para.png);
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: -8%;
+  width: 100%;
+}
+
+.discount-para-heading {
+  font-weight: 500;
+  color: #34495e;
+}
+
+.discount-para-para {
+  margin-top: -20px;
+  font-size: 0.9rem;
+}
+
+.discount-container {
+  margin: 70px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Discount Ends Here */
+
+/* Links To Other Services */
+
+.links-to-other {
+  margin: 30px 0px;
+}
+
+.links-to-other-page {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.links-to-other-page-box {
+  text-align: center;
+  height: 100px;
+  width: 100px;
+}
+
+.loan-para,
+.loan-para-1 {
+  color: #34495e;
+}
+
+.links-to-other-page-box:hover .loan-para {
+  color: #34495e;
+}
+
+.links-to-other-page-box:hover .loan-para-1 {
+  color: #34495e;
+}
+
+.links-to-other-page-box img {
+  width: 37px;
+}
+
+.links-to-other-page-box a {
+  text-decoration: none;
+}
+
+.loan-para {
+  margin-top: 17px;
+}
+
+.loan-para-1 {
+  margin-top: 10px;
+}
+
+.links-to-other-page ul li {
+  display: inline-block;
+}
+
+.links-to-other i {
+  color: #116a9e;
+  font-size: 2.3rem;
+}
+
+/* Links Ends Here */
+
+/* Section Heading & Section Para Here */
+
+.section-heading {
+  color: #34495e;
+  text-align: center;
+}
+
+.section-para {
+  text-align: center;
+  color: #858e99;
+  margin-top: -10px;
+}
+
+/* Section Heading & Section Para End Here */
+
+/* Why Us Start From Here */
+
+.why-us {
+  background-image: linear-gradient(0deg, #3ab2ee 70%, #44c5ff 70%);
+  padding: 20px 0px;
+}
+
+.why-us-info {
+  padding: 20px 0px;
+}
+
+.why-us-img {
+  text-align: center;
+}
+
+.why-us-img img {
+  max-width: 100%;
+}
+
+.section-heading-color {
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.section-para-color {
+  color: #fff;
+  text-align: center;
+}
+
+.section-para-1 {
+  width: 80%;
+  margin: auto;
+}
+
+/* Why Us Ends Here */
+
+/* Product Start from here */
+
+.products {
+  margin: 50px 0px;
+}
+
+.product-container {
+  display: flex;
+  width: 80%;
+  margin: 50px auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.product-box {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.product-heading {
+  margin-top: 5px;
+  color: #006a9e;
+  font-weight: 700;
+}
+
+.product-para {
+  color: #858e99;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  text-align: justify;
+}
+
+/* Product Ends Here */
+
+/* Media Quries Start From Here */
+
+@media screen and (max-width: 992px) {
+  .discount-container {
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .discount-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discount-box ul li {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+  }
+
+  .discount-box {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .discount-box ul li {
+    width: 85%;
+    margin: auto;
+  }
+
+  .discount-para-heading {
+    font-size: 0.9rem;
+  }
+
+  .section-heading {
+    font-size: 1.2rem;
+  }
+
+  .section-para {
+    font-size: 0.9rem;
+  }
+
+  .discount-para-para {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+  .discount-box ul li::before {
+    top: 10px;
+    left: -28px;
+  }
+}
+/* Media Quries End  Here */
