@@ -218,6 +218,68 @@ header {
 
 /* Product Ends Here */
 
+/* Footer Start From Here */
+
+footer {
+  background: #116a9e;
+  padding: 50px 0px;
+}
+
+.footer-container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 0px;
+  border-bottom: 1px solid #fff;
+}
+
+.footer-box {
+  width: 20%;
+}
+
+.footer-info .footer-logo {
+  width: 150px;
+}
+
+.footer-info p {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  color: #d9dbe1;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.footer-social-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-link h2 {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer-social-links a {
+  text-decoration: none;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.footer-link a {
+  color: #d9dbe1;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+/* Footer Ends Here */
+
 /* Media Quries Start From Here */
 
 @media screen and (max-width: 992px) {
@@ -242,6 +304,32 @@ header {
 
   .discount-box {
     margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-box-1 {
+    display: flex;
+    justify-content: flex-start;
+    width: 33%;
+    margin: 44px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-container {
+    width: 100%;
+  }
+
+  .footer-box {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer-box {
+    width: 70%;
+    margin: 30px auto;
   }
 }
 
