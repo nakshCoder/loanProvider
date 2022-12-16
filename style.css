@@ -367,7 +367,7 @@ footer {
 }
 
 .bank-submit-button input {
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: #1abc9c;
   border: none;
   color: white;
@@ -460,7 +460,7 @@ input[type="radio"] {
 }
 
 .credit-card-submit-button input {
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: #1abc9c;
   border: none;
   color: white;
@@ -612,10 +612,10 @@ input[type="radio"] {
   }
 
   .bank-type-container {
-    width: 95%;
+    width: 100%;
   }
   .credit-card-type-container {
-    width: 95%;
+    width: 100%;
   }
 }
 /* Media Quries End  Here */
