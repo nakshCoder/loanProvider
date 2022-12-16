@@ -552,6 +552,11 @@ input[type="radio"] {
     margin: auto;
   }
 
+  .contact-form {
+    width: 90% !important;
+    margin: auto !important;
+  }
+
   .discount-para-heading {
     font-size: 0.9rem;
   }
@@ -582,7 +587,3 @@ input[type="radio"] {
   }
 }
 /* Media Quries End  Here */
-
-/* form start */
-
-/* form end */
