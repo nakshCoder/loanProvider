@@ -290,104 +290,190 @@ footer {
 
 /* Home page Ends Here */
 
-/* Credit Card Page Start Here */
+/* credit card page start here */
 
-/* header info start */
+/* Bank Type Start Here */
 
-.header-info {
-  width: 90%;
-  margin: 20px auto 0px auto;
+/* Bank Type Ends Here */
+
+.bank-header {
+  margin-bottom: 100px;
 }
 
-.credit-card-heading {
-  font-size: 1.2rem;
-  color: #34495e;
-}
-
-.credit-card-para {
-  font-size: 0.9rem;
-  color: #34495e;
-  background-color: #f3f9ff;
-  margin-bottom: 0px;
-}
-
-/* header info ends */
-
-/* credit card user info */
-
-.credit-card-section-heading {
-  background-color: #34495e;
+.bank-header-heading {
   color: white;
-  padding: 10px 0px;
-  font-weight: 400;
+  background-color: #34495e;
+  padding: 15px 0px;
   text-align: center;
 }
 
-/* 
-.credit-card-user-info-para {
+.bank-header-para {
+  text-align: center;
   font-size: 1.4rem;
+  color: #34495e;
   font-weight: 500;
-  color: #34495e;
-  text-align: center;
-}*/
+}
 
-/* credit card user info ends */
-
-/* credit card box start */
-
-.credit-card-box {
-  width: 90%;
+.bank-type-container {
+  width: 80%;
   margin: auto;
-  background-color: #eee;
-  padding: 20px 20px;
-  box-shadow: 0 13px 19px -17px rgba(0, 0, 0, 0.49);
-  -webkit-box-shadow: 0 13px 19px -17px rgba(0, 0, 0, 0.49);
-  -moz-box-shadow: 0 13px 19px -17px rgba(0, 0, 0, 0.49);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.credit-card-box p {
+.bank-type-box {
+  width: 150px;
+  margin: 15px;
+  border-radius: 11px;
+  box-shadow: 0px 0px 6px 6px lightgray;
+  height: 150px;
+  transition: all 0.4s ease-in-out;
+}
+
+.bank-type-box input {
+  margin: 20px 0px 10px 64px;
+}
+
+.bank-type-box:hover {
+  border-radius: 11px;
+  background-color: #1abc9c;
+}
+
+.bank-type-box:hover .bank-name {
+  color: white;
+}
+
+.bank-image {
+  background-image: url(image/bank.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 39%;
+}
+
+.bank-name {
   color: #34495e;
-}
-
-/* credit card box ends */
-
-/* credit card details start here */
-
-.credit-card-details {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.credit-card-update {
-  font-size: 0.8rem;
-  background-color: yellow;
-  padding: 5px;
-}
-
-.credit-card-update-para {
+  font-weight: 500;
   font-size: 1rem;
-  margin: 15px 0px;
+  margin-left: 37px;
+  transition: all 0.4s ease-in-out;
 }
 
-.credit-card-update-para a {
-  color: #116a9e;
-  text-decoration: underline;
+.bank-submit-button {
+  text-align: center;
+  margin: 30px 0px;
 }
 
-/* credit card details table start here*/
-
-.table thead {
-  background-color: #116a9e;
+.bank-submit-button input {
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  border: none;
+  color: white;
 }
 
-.table thead tr th {
-  color: #fff;
+#myradio {
+  accent-color: green;
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+  transform: scale(1.2);
+}
+
+/* Card Type */
+
+.credit-card-header {
+  margin-bottom: 100px;
+}
+
+.credit-card-header-heading {
+  color: white;
+  background-color: #34495e;
+  padding: 15px 0px;
   text-align: center;
 }
 
-/* credit card details table ends here */
+.credit-card-header-para {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #34495e;
+  font-weight: 500;
+}
 
-/* credit card details ends here */
+.credit-card-type-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.credit-card-type-box {
+  width: 150px;
+  margin: 15px;
+  border-radius: 11px;
+  box-shadow: 0px 0px 6px 6px lightgray;
+  height: 150px;
+  transition: all 0.4s ease-in-out;
+}
+
+.credit-card-type-box input {
+  margin: 20px 0px 10px 64px;
+}
+
+.credit-card-type-box:hover {
+  border-radius: 11px;
+  background-color: #1abc9c;
+}
+
+.credit-card-type-box:hover .credit-card-name {
+  color: white;
+}
+
+.credit-card-image {
+  background-image: url(image/visa.png);
+  background-repeat: no-repeat;
+  margin-left: 52px;
+  width: 28%;
+  height: 20%;
+}
+
+.credit-card-name {
+  color: #34495e;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 52px;
+  transition: all 0.4s ease-in-out;
+}
+
+.credit-card-submit-button {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.credit-card-submit-button input {
+  padding: 10px 20px;
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+}
+
+#myradio {
+  accent-color: green;
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+  transform: scale(1.2);
+}
+
+/* card Type ends here */
+
+/* credit card page ends here */
 
 /* Media Quries Start From Here */
 
@@ -478,3 +564,7 @@ footer {
   }
 }
 /* Media Quries End  Here */
+
+/* form start */
+
+/* form end */
