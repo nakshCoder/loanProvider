@@ -493,6 +493,31 @@ input[type="radio"] {
 
 /* credit card page ends here */
 
+/* contact Us page start here */
+
+.contact-heading {
+  color: #fff;
+  background-color: #34495e;
+  text-align: center;
+  padding: 20px 0px;
+  margin-bottom: 30px;
+}
+
+.message-btn {
+  background-color: #34495e;
+  border: none;
+}
+
+.message-btn:hover {
+  background-color: #34495e;
+}
+
+.map {
+  margin-top: 22px;
+}
+
+/* contact us page ends here */
+
 /* Media Quries Start From Here */
 
 @media screen and (max-width: 992px) {
@@ -584,6 +609,13 @@ input[type="radio"] {
   .discount-box ul li::before {
     top: 10px;
     left: -28px;
+  }
+
+  .bank-type-container {
+    width: 95%;
+  }
+  .credit-card-type-container {
+    width: 95%;
   }
 }
 /* Media Quries End  Here */
