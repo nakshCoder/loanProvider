@@ -518,6 +518,89 @@ input[type="radio"] {
 
 /* contact us page ends here */
 
+/* service page start here */
+
+.services-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(image/service-banner.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.services-info {
+  text-align: center;
+  padding-top: 130px;
+}
+
+.services-info p,
+h1 {
+  color: white;
+}
+
+.services-info h1 {
+  font-size: 3.5rem;
+}
+
+.services-info p {
+  font-size: 1.4rem;
+}
+
+.line {
+  width: 330px;
+  height: 0.2rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.loan-card {
+  margin: 80px 0px;
+}
+
+.loan-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.loan-info {
+  text-align: center;
+}
+
+.loan-head {
+  color: #f59019;
+}
+
+.loan-para {
+  color: #212529;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #116a9e;
+  border: none;
+  padding: 10px 25px;
+  transition: all ease-in-out 0.3s;
+}
+
+.btn-primary:hover {
+  color: #212529;
+  background-color: #f59019;
+}
+
+.loan-box {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 44px 0px rgb(218 218 218 / 90%);
+}
+
+/* service page ends here */
+
 /* Media Quries Start From Here */
 
 @media screen and (max-width: 992px) {
@@ -551,6 +634,10 @@ input[type="radio"] {
     justify-content: flex-start;
     width: 33%;
     margin: 44px;
+  }
+
+  .services-info h1 {
+    font-size: 2rem;
   }
 }
 
@@ -616,6 +703,11 @@ input[type="radio"] {
   }
   .credit-card-type-container {
     width: 100%;
+  }
+
+  .line {
+    width: 200px;
+    height: 0.1rem;
   }
 }
 /* Media Quries End  Here */
