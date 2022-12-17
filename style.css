@@ -667,6 +667,88 @@ h1 {
 
 /* about page ends here */
 
+/* emi calculator page start here */
+
+.cal-body {
+  background-color: #fff;
+}
+
+#border {
+  width: 90%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 100px auto;
+}
+
+#emi-calculation {
+  margin-bottom: 40px;
+  width: 400px;
+  height: 350px;
+  border-radius: 11px;
+  background-color: #d9dbe1;
+}
+#title {
+  font-size: 2rem;
+  color: #191d3a;
+  text-align: center;
+}
+
+#emi-output {
+  width: 400px;
+  height: 350px;
+  border-radius: 11px;
+  background-color: #d9dbe1;
+}
+
+.section {
+  font-size: 20px;
+  padding: 10px;
+}
+.result {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 5px;
+  font-family: verdana;
+}
+
+.input {
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  background-color: #e9ecef;
+  border: none;
+  padding: 10px 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#calc,
+#reset {
+  padding: 6px 80px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #191d3a;
+  color: white;
+}
+.submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* emi calculator page ends here */
+
 /* Media Quries Start From Here */
 
 @media screen and (max-width: 992px) {

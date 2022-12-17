@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #3b4368 !important;
+      }
+      h1 {
+        color: #191d3a !important;
+      }
+      h1 i {
+        color: #191d3a !important;
+      }
+      .btn-dark {
+        background-color: #191d3a !important;
+      }
+      #loading {
+        display: none;
+        width: 100px;
+        height: 100px;
+        margin: 2em auto;
+        border: 2px solid #b3b7e2;
+        border-radius: 50%;
+        border-top-color: #191d3a;
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+      }
+      @keyframes spin {
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      #results {
+        display: none;
+        transition: display 0.3s;
+      }
+    </style>
+    <script>
+      /* ==============================================================================
+                              *Loan Calculator UI App*
+============================================================================== */
+
+      // Listen for Submit Button
+
+      document
+        .getElementById(`loan-form`)
+        .addEventListener(`submit`, calculateResults);
+
+      // Calculate Results Function
+
+      function calculateResults(e) {
+        console.log(`calculating...`);
+
+        // UI Variables - Inputs
+        const loanAmount = document.querySelector(`#loan-amount`);
+        const interestAmount = document.querySelector(`#interest-amount`);
+        const yearsAmount = document.querySelector(`#years-amount`);
+
+        // UI Variables - Results
+        const monthlyPayment = document.querySelector(`#monthly-payment`);
+        const totalPayment = document.querySelector(`#total-payment`);
+        const totalInterest = document.querySelector(`#total-interest`);
+
+        // Calculation Variables
+        const principle = parseFloat(loanAmount.value);
+        const calculatedInterest = parseFloat(interestAmount.value) / 100 / 12;
+        const calculatedPayments = parseFloat(yearsAmount.value) * 12;
+
+        // Calculate Montly Payments
+        const x = Math.pow(1 + calculatedInterest, calculatedPayments);
+        const monthly = (principle * x * calculatedInterest) / (x - 1);
+
+        // Output Result
+
+        if (isFinite(monthly)) {
+          monthlyPayment.value = monthly.toFixed(2);
+          totalPayment.value = (monthly * calculatedPayments).toFixed(2);
+          totalInterest.value = (
+            monthly * calculatedPayments -
+            principle
+          ).toFixed(2);
+
+          // Display spinner for 3 seconds
+          loadSpinner();
+          setTimeout(removeSpinner, 2000);
+
+          // Display Results Div after calculation is complete
+          setTimeout(showResults, 2000);
+        } else {
+          showError(`Please check your numbers`);
+        }
+
+        e.preventDefault();
+      }
+
+      // Spinner Loading Function
+
+      function loadSpinner() {
+        document.querySelector(`#results`).style.display = `none`;
+        document.querySelector(`#loading`).style.display = `block`;
+      }
+
+      // Remove Spinner
+
+      function removeSpinner() {
+        document.querySelector(`#loading`).style.display = `none`;
+      }
+
+      // Show Results
+
+      function showResults() {
+        document.querySelector(`#results`).style.display = `block`;
+      }
+
+      // Show Error Function
+
+      function showError(error) {
+        // Create a div element
+        const errorDiv = document.createElement(`div`);
+        const messageDiv = document.createElement(`div`);
+        const message = document.createElement(`p`);
+
+        // Page elements for insertion
+        const card = document.querySelector(`.card`);
+        const heading = document.querySelector(`.heading`);
+
+        // Add a class to elements
+        errorDiv.className = `alert alert-danger`;
+
+        // Add text message to element
+        message.textContent = error;
+
+        // Add text message element to div
+        errorDiv.appendChild(messageDiv);
+        messageDiv.appendChild(message);
+
+        // Display error div on page before heading
+        card.insertBefore(errorDiv, heading);
+
+        // Clear error after 3s
+        setTimeout(clearError, 3000);
+      }
+
+      // Clear error function
+
+      function clearError() {
+        document.querySelector(`.alert`).remove();
+      }
+
+      // Results display after calculation
+    </script>
+  </head>
+  <body>
+    <!-- App Main Section -->
+    <section class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <card class="card card-body text-center mt-5 mb-5">
+            <h1 class="heading display-5 pb-3">
+              <i class="fas fa-home"></i> Home Loan Calculator
+            </h1>
+            <form id="loan-form">
+              <div class="form-group">
+                <!-- Loan Amount Input Group -->
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="loan-amount"
+                    placeholder="Amount"
+                    aria-label="Amount (to the nearest dollar)"
+                  />
+                </div>
+              </div>
+              <!-- Interest Input Group -->
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">%</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="interest-amount"
+                    placeholder="Interest"
+                    aria-label="Percentage Amount"
+                  />
+                </div>
+              </div>
+              <!-- Years Repayment Input Group -->
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Years</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="years-amount"
+                    placeholder="Years to Repay Loan"
+                    aria-label="Number of Years to Repay"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Calculate"
+                  class="btn btn-dark btn-block"
+                  id="calculate-loan-btn"
+                />
+              </div>
+            </form>
+
+            <!-- Loader Goes Here -->
+
+            <div id="loading"></div>
+
+            <!-- Results Goes Here -->
+
+            <div id="results" class="pt-4">
+              <h5>Results</h5>
+              <!--Monthly Payment Group -->
+              <div class="form-group mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Monthly Payment</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="monthly-payment"
+                    aria-label="Result in Monthly Payment Amount"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <!--Total Payment Group -->
+              <div class="form-group mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Total Payment</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-payment"
+                    aria-label="Result in Total Payment Amount"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <!--Interest Payment Group -->
+              <div class="form-group mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Total Interest</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-interest"
+                    aria-label="Result in Interest Payable Amount"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </card>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
