@@ -601,6 +601,72 @@ h1 {
 
 /* service page ends here */
 
+/* about page start here */
+
+.about-us {
+  margin: 100px auto;
+  width: 90%;
+}
+
+.about-us-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-us-image {
+  background-image: url(image/about-us.png);
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+}
+
+.about-us-info {
+  width: 45%;
+}
+
+.about-us-main-heading {
+  font-size: 3rem;
+}
+
+.about-us-heading {
+  color: #006a9e;
+}
+
+.about-us-heading::before {
+  content: "||";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.about-us-heading::after {
+  content: "||";
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.about-us-para {
+  line-height: 2rem;
+  text-align: justify;
+  color: #68686f;
+}
+
+.about-us-list li {
+  list-style: none;
+  line-height: 2.2rem;
+  color: #68686f;
+}
+
+.about-us-list i {
+  color: #116a9e;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+/* about page ends here */
+
 /* Media Quries Start From Here */
 
 @media screen and (max-width: 992px) {
@@ -639,6 +705,17 @@ h1 {
   .services-info h1 {
     font-size: 2rem;
   }
+  .about-us-info {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .about-us-image {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -648,6 +725,14 @@ h1 {
 
   .footer-box {
     width: 30%;
+  }
+
+  .about-us-main-heading {
+    font-size: 2rem;
+  }
+
+  .about-us-heading {
+    margin-bottom: 20px;
   }
 }
 
@@ -708,6 +793,14 @@ h1 {
   .line {
     width: 200px;
     height: 0.1rem;
+  }
+
+  .services-header {
+    height: 80vh;
+  }
+
+  .about-us-main-heading {
+    font-size: 1.5rem;
   }
 }
 /* Media Quries End  Here */
