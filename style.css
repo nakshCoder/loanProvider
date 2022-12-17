@@ -796,11 +796,15 @@ h1 {
   }
 
   .services-header {
-    height: 80vh;
+    height: 60vh;
   }
 
   .about-us-main-heading {
     font-size: 1.5rem;
+  }
+
+  .about-us-image {
+    height: 60vh;
   }
 }
 /* Media Quries End  Here */
